@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            // to access the current object instance : this
+            const user = {
+              name: "john",
+              age: 12,
+              greeting: function () {
+                console.log("outside",this);
+                setTimeout(() =>{
+                    console.log("inside",this);
+                  console.log("hello from", this.name);
+                }, 1000);
+              },
+            };
+            user.greeting();
+            user.name = "demo";
+            user.greeting();
+            console.log(user.name);
+            console.log(user["name"]);
+          </script>
+        </body>
+        </html>
